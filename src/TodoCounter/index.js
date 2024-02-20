@@ -11,7 +11,8 @@ function TodoCounter() {
     const completedAllTasks = totalTodos === completedTodos;
     const message = completedAllTasks ?
     <h1 className="TodoCounter"><span>¡Felicidades!</span> Has completado todas las tareas</h1>:
-    <h1 className="TodoCounter">Has completado <span>{ completedTodos }</span> de <span span > { totalTodos }</span> tareas.</h1>
+    <h1 className="TodoCounter">Has completado <span>{ completedTodos }</span> de <span> { totalTodos }</span> tareas.</h1>
+    
     return  message;
 }
 
