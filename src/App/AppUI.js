@@ -10,6 +10,7 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoForm } from '../TodoForm';
 import { Modal } from '../Modal';
 import { TodoContext } from '../TodoContext';
+// import './App.css';
 
 function AppUI() {
     const {
@@ -24,9 +25,9 @@ function AppUI() {
 
     return (
         <>
-            <TodoCounter />
-            <TodoSearch />
             <TodoList>
+                <TodoCounter />
+                <TodoSearch />
                 {
                     loading && (
                         <>
@@ -46,14 +47,15 @@ function AppUI() {
 
                 }
                 {searchedTodos.map(todo => (
-                        <TodoItem
-                            key={todo.text}
-                            text={todo.text}
-                            completed={todo.completed}
-                            onComplete={() => completeTodo(todo.text)}
-                            onDelete={() => deleteTodo(todo.text)}
-                        />
-                    ))
+                    <TodoItem
+                        key={todo.text}
+                        text={todo.text}
+                        completed={todo.completed}
+                        onComplete={() => completeTodo(todo.text)}
+                        onDelete={() => deleteTodo(todo.text)}
+                        setOpenModal={setOpenModal}
+                    />
+                ))
                 }
             </TodoList>
             <CreateTodoButton

@@ -1,5 +1,13 @@
 .TodoList {
   margin: 0;
   padding: 0 0 56px 0;
-  list-style: none;
+  list-style: none; 
+}
+
+.Todo-list-hundred--percent {
+  width: 100% 
+}
+
+.Todo-list-hundred--flexible {
+    width: 75% 
 }

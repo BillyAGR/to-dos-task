@@ -1,18 +1,26 @@
-import { CompleteIcon } from '../TodoIcon/CompleteIcon'
-import { DeleteIcon } from '../TodoIcon/DeleteIcon'
+import { CompleteIcon } from '../TodoIcon/CompleteIcon';
+import { EditIcon } from '../TodoIcon/EditIcon';
+import { DeleteIcon } from '../TodoIcon/DeleteIcon';
 import './TodoItem.css';
 
 function TodoItem(props) {
+    const completed = props.completed;
+
     return (
-        <li className="TodoItem">
+        <li className={`TodoItem ${completed && "TodoItem--complete"}`}>
+
+            <p className={`TodoItem-p ${completed && "TodoItem-p--complete"}`}>
+                {props.text}
+            </p>
+
             <CompleteIcon
-                completed={props.completed}
+                completed={completed}
                 onComplete={props.onComplete}
             />
 
-            <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
-                {props.text}
-            </p>
+            <EditIcon
+                setOpenModal={props.setOpenModal}
+            />
 
             <DeleteIcon
                 onDelete={props.onDelete}

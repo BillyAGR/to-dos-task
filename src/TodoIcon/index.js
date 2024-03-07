@@ -1,8 +1,10 @@
-import { FaCheck, FaXmark } from "react-icons/fa6";
+import { FaCheck, FaXmark, FaPen } from "react-icons/fa6";
 import './TodoIcon.css'
 
 const iconTypes = {
     check: (color) => <FaCheck
+        className="Icon-svg" fill={color} />,
+    edit: (color) => <FaPen
         className="Icon-svg" fill={color} />,
     delete: (color) => <FaXmark
         className="Icon-svg" fill={color} />

@@ -1,6 +1,7 @@
 import './CreateTodoButton.css';
 
 function CreateTodoButton({ setOpenModal }) {
+    // console.log('button create', setOpenModal);
     return (
         <button
             className="CreateTodoButton"

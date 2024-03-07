@@ -1,21 +1,21 @@
 .CreateTodoButton {
-  background-color: #61dafa;
-  box-shadow: 0 5px 25px rgba(97, 218, 250, .5);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 50px;
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  font-weight: 700;
-  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 64px;
   width: 64px;
+  bottom: 24px;
+  right: 24px;
   z-index: 1;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fafafa;
+  background-color: #61dafa;
+  box-shadow: 0 5px 25px rgba(97, 218, 250, .5);
+  font-size: 50px;
+  font-weight: 700;
   transform: rotate(0);
   transition: .3s ease
 }
