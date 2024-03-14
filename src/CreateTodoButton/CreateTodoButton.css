@@ -12,12 +12,12 @@
   border-radius: 50%;
   cursor: pointer;
   color: #fafafa;
-  background-color: #61dafa;
+  background-color: var(--purple);
   box-shadow: 0 5px 25px rgba(97, 218, 250, .5);
   font-size: 50px;
   font-weight: 700;
   transform: rotate(0);
-  transition: .3s ease
+  transition: all 0.3s ease 0s;
 }
 
 .CreateTodoButton:hover {

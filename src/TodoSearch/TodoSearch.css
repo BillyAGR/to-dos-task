@@ -2,23 +2,23 @@
   width: calc(100% - 62px);
   height: 64px;
   margin: 0 24px;
-  background: #F9FBFC;
-  border: 2px solid #202329;
+  background: var(--white);
+  border: 2px solid  var(--purple);
   border-radius: 100px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  font-family: 'Montserrat';
-  font-size: 24px;
+  box-shadow: var(--box-shadow);
+  font-family: var(--font);
+  font-size: var(--md);
   font-weight: 400;
-  color: #1E1E1F;
+  /* color: #1E1E1F; */
   text-align: center;
 }
 
 .TodoSearch::placeholder {
-  font-family: 'Montserrat';
+  font-family: var(--font);
   font-weight: 400;
   color: #A5A5A5;
 }
 
 .TodoSearch:focus {
-  outline-color: #61DAFA;
+  outline-color: var(--purple-bright);
 }

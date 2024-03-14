@@ -6,7 +6,7 @@ function TodoForm() {
     const {
         addTodo,
         setOpenModal,
-        
+
     } = React.useContext(TodoContext);
 
     const [newTodoValue, setNewTodoValue] = React.useState('');
@@ -28,11 +28,20 @@ function TodoForm() {
     return (
         <form onSubmit={onSubmit}>
             <label> Escribe tu nuevo Task</label>
+            <input placeholder='Nombre de la tarea' />
+
             <textarea placeholder='Describa aquí tu nueva tarea'
                 value={newTodoValue}
                 onChange={onChange}
                 required
             />
+            <input type="date" name="fechaNacimiento" />
+            <select name="pais">
+                <option value="">Selecciona un país</option>
+                <option value="colombia">Colombia</option>
+                <option value="mexico">México</option>
+                <option value="argentina">Argentina</option>
+            </select>
             <div className='TodoForm-buttonContainer'>
                 <button
                     className='TodoForm-button TodoForm-button--cancel'

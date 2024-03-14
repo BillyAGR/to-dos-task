@@ -4,7 +4,7 @@
     align-items: center;
     height: 48px;
     width: 48px;
-    font-size: 24px;
+    font-size: var(--md);
     font-weight: 700;
     cursor: pointer;
 }
@@ -15,7 +15,7 @@
 }
 
 .Icon-container-check--active {
-    color: #4caf50
+    color: var(--highlight);
 }
 
 .Icon-container-edit {
@@ -29,18 +29,31 @@
 }
 
 .Icon-container-delete:hover {
-    color: red
+    color: var(--highlight-two);
 }
 
 .Icon-svg {
-    width: 24px;
-    height: 24px
+    width: var(--md);
+    height: var(--md);
+}
+
+.Icon-svg-white {
+    fill: var(--white);
+}
+
+.Icon-svg-yellow {
+    fill: var(--highlight);
 }
 
 .Icon-container-check:hover .Icon-svg {
-    fill: green
+    fill: var(--highlight);
+}
+
+.Icon-container-edit:hover .Icon-svg {
+    fill: var(--purple-bright);
 }
 
 .Icon-container-delete:hover .Icon-svg {
-    fill: red
+    fill:var(--highlight-two);
 }
+

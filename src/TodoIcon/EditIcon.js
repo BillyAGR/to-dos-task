@@ -6,7 +6,7 @@ function EditIcon({ setOpenModal }) {
     return (
         <TodoIcon
             type='edit'
-            color='gray'
+            color='white'
             onClick={
                 () => {
                     setOpenModal(state => !state);

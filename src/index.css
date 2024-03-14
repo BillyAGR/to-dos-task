@@ -1,22 +1,44 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /*========== Colors ==========*/
+
+  --hue-color: 271;
+  --gold: #FDB927;
+  --purple: hsl(var(--hue-color), 56%, 33%);
+  --purple-bright: hsl(var(--hue-color), 87%, 55%);
+  --purple-item: hsl(var(--hue-color), 100%, 25%);
+  --box-shadow: var(--purple-bright) 0px 10px 50px -20px;
+  --highlight: #ffff00;
+  --highlight-two: #ff0000;
+  --white: #FFFFFF;
+  --font: 'Montserrat', Arial, Helvetica, sans-serif;
+
+  /*--black: #000000;
+  --very-light-gray: #C7C7C7;
+  --text-input-field: #F7F7F7;
+  --mechanic-orange: #E66000;
+  --dark: #232830;
+  --body-color: var(--white);
+  --border-botton: 1px solid var(--very-light-gray);
+  --invert-green: brightness(0.9) sepia(0.8) hue-rotate(5deg);
+  --color-text: var(--black);
+  --image-with-hover: invert(100%) brightness(0);
+  --image-outwith-hover: brightness(0.5); */
+
+  /*========== Sizer  Font ==========*/
+  --md: 24px;
+  /* --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --size: 240px;
+  --bit-size: 140px; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-body { 
+body {
   margin: 0;
   padding: 0;
-  background: #F2F4F5;
-  color: #1E1E1F;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: var(--gold);
+  color: var(--white);
+  font-family: var(--font);
 }
 
 #root {
