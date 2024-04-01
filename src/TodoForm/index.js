@@ -9,11 +9,16 @@ function TodoForm() {
 
     } = React.useContext(TodoContext);
 
-    const [newTodoValue, setNewTodoValue] = React.useState('');
+    const [newName, setnewName] = React.useState('');
+    const [newDescription, setnewDescription] = React.useState('');
+    const [newDealine, setnewDealine] = React.useState('');
+    const [newCategory, setnewCategory] = React.useState('');
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodo(newTodoValue);
+        // console.log('newTodoValue', newTodoValue);
+        addTodo(newName, newDescription, newDealine, newCategory);
+        console.log('addTodo', addTodo);
         setOpenModal(false);
     }
 
@@ -21,22 +26,47 @@ function TodoForm() {
         setOpenModal(false);
     }
 
-    const onChange = (event) => {
-        setNewTodoValue(event.target.value);
+    // const onChange = (event) => {
+    //     // console.log(event.target.value);
+    //     setnewDescription(event.target.value);
+    // }
+
+    // const onChange2 = (event) => {
+    //     // console.log(event.target.value);
+    //     setnewName(event.target.value);
+    // }
+
+    const handleInputChange = (event, setState) => {
+        setState(event.target.value);
     }
 
     return (
-        <form onSubmit={onSubmit}>
-            <label> Escribe tu nuevo Task</label>
-            <input placeholder='Nombre de la tarea' />
-
-            <textarea placeholder='Describa aquí tu nueva tarea'
-                value={newTodoValue}
-                onChange={onChange}
+        <form className='TodoForm' onSubmit={onSubmit}>
+            <label className='TodoForm-label'> Escribe tu nuevo Task</label>
+            <input className='TodoForm-input' placeholder='Nombre de la tarea'
+                value={newName}
+                onChange={(event) => handleInputChange(event, setnewName)}
                 required
             />
-            <input type="date" name="fechaNacimiento" />
-            <select name="pais">
+
+            <textarea className='TodoForm-textArea' placeholder='Describa aquí tu nueva tarea'
+                value={newDescription}
+                onChange={(event) => handleInputChange(event, setnewDescription)}
+                required
+            />
+            <input className='TodoForm-input'
+                type="date"
+                name="fechaNacimiento"
+                value={newDealine}
+                onChange={(event) => handleInputChange(event, setnewDealine)}
+                required
+            />
+            <select className='TodoForm-select'
+                name="pais"
+                value={newCategory}
+                onChange={(event) => handleInputChange(event, setnewCategory)}
+                required
+            >
                 <option value="">Selecciona un país</option>
                 <option value="colombia">Colombia</option>
                 <option value="mexico">México</option>

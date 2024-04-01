@@ -14,6 +14,8 @@ function TodoProvider({ children }) {
     const [openModal, setOpenModal] = React.useState(false);
     const totalTodos = todos.length;
     const completedTodos = todos.filter(todo => !!todo.completed).length;
+    console.log('todos', todos);
+    console.log('saveTodos', saveTodos);
 
     const searchedTodos = todos.filter(
         (todo) => {
@@ -26,12 +28,17 @@ function TodoProvider({ children }) {
         }
     );
 
-    const addTodo = (text) => {
+    const addTodo = (name, text, dealine, category) => {
         const newTodos = [...todos];
         newTodos.push({
+            name,
             text,
+            dealine,
+            category,
             completed: false,
         });
+
+        // console.log(newTodos);
         saveTodos(newTodos);
     };
 

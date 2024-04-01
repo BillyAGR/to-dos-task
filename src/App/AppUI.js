@@ -34,9 +34,6 @@ function AppUI() {
                             <TodosLoading />
                             <TodosLoading />
                             <TodosLoading />
-                            <TodosLoading />
-                            <TodosLoading />
-                            <TodosLoading />
                         </>
                     )
                 }
@@ -44,16 +41,19 @@ function AppUI() {
                 {
                     (!loading && searchedTodos.length === 0) &&
                     <EmptyTodos />
-
                 }
                 {searchedTodos.map(todo => (
                     <TodoItem
                         key={todo.text}
                         text={todo.text}
+                        name={todo.name}
+                        dealine={todo.dealine}
+                        category={todo.category}
                         completed={todo.completed}
                         onComplete={() => completeTodo(todo.text)}
                         onDelete={() => deleteTodo(todo.text)}
                         setOpenModal={setOpenModal}
+
                     />
                 ))
                 }

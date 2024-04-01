@@ -4,9 +4,10 @@ import './TodosLoading.css';
 function TodosLoading() {
     return (
         <div className="LoadingTodo-container">
-            <span className="LoadingTodo-completeIcon"></span>
             <p className="LoadingTodo-text"></p>
-            <span className="LoadingTodo-deleteIcon"></span>
+            <span className="LoadingTodo-completeIcon" />
+            <span className="LoadingTodo-editIcon" />
+            <span className="LoadingTodo-deleteIcon" />
         </div>
     );
 }
