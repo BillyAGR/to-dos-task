@@ -4,6 +4,7 @@
   list-style: none;
   border-radius: 26px;
   background-color: var(--gold);
+  box-shadow: #000000 0px 10px 50px -20px;
   max-height: 600px;
   overflow-y: auto;
 }

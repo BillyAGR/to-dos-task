@@ -1,8 +1,7 @@
 import React from 'react';
 import { TodoIcon } from './';
 
-function EditIcon({ setOpenModal }) {
-    // console.log('edit create', setOpenModal);
+function EditIcon({ setOpenModal, setmodalEdit, handleEdit }) {
     return (
         <TodoIcon
             type='edit'
@@ -10,6 +9,8 @@ function EditIcon({ setOpenModal }) {
             onClick={
                 () => {
                     setOpenModal(state => !state);
+                    setmodalEdit(state => !state);
+                    handleEdit();
                 }
             }
         />

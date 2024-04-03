@@ -6,7 +6,9 @@ function TodoForm() {
     const {
         addTodo,
         setOpenModal,
-
+        setmodalEdit,
+        formData,
+        setFormData,
     } = React.useContext(TodoContext);
 
     const [newName, setnewName] = React.useState('');
@@ -14,27 +16,30 @@ function TodoForm() {
     const [newDealine, setnewDealine] = React.useState('');
     const [newCategory, setnewCategory] = React.useState('');
 
+    React.useEffect(() => {
+        if (formData) {
+            setnewName(formData.name);
+            setnewDescription(formData.description);
+            setnewDealine(formData.dealine);
+            setnewCategory(formData.category);
+        }
+    }, [formData]);
+
     const onSubmit = (event) => {
         event.preventDefault();
-        // console.log('newTodoValue', newTodoValue);
         addTodo(newName, newDescription, newDealine, newCategory);
-        console.log('addTodo', addTodo);
-        setOpenModal(false);
+        reset();
     }
 
     const onCancel = () => {
-        setOpenModal(false);
+        reset();
     }
 
-    // const onChange = (event) => {
-    //     // console.log(event.target.value);
-    //     setnewDescription(event.target.value);
-    // }
-
-    // const onChange2 = (event) => {
-    //     // console.log(event.target.value);
-    //     setnewName(event.target.value);
-    // }
+    const reset = () => {
+        setmodalEdit(false);
+        setOpenModal(false);
+        setFormData(null);
+    }
 
     const handleInputChange = (event, setState) => {
         setState(event.target.value);
@@ -47,6 +52,7 @@ function TodoForm() {
                 value={newName}
                 onChange={(event) => handleInputChange(event, setnewName)}
                 required
+                disabled={formData ? true : false}
             />
 
             <textarea className='TodoForm-textArea' placeholder='Describa aquí tu nueva tarea'
@@ -56,21 +62,19 @@ function TodoForm() {
             />
             <input className='TodoForm-input'
                 type="date"
-                name="fechaNacimiento"
                 value={newDealine}
                 onChange={(event) => handleInputChange(event, setnewDealine)}
                 required
             />
             <select className='TodoForm-select'
-                name="pais"
                 value={newCategory}
                 onChange={(event) => handleInputChange(event, setnewCategory)}
                 required
             >
-                <option value="">Selecciona un país</option>
-                <option value="colombia">Colombia</option>
-                <option value="mexico">México</option>
-                <option value="argentina">Argentina</option>
+                <option value="">Select categories</option>
+                <option value="home">Home</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
             </select>
             <div className='TodoForm-buttonContainer'>
                 <button

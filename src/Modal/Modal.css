@@ -10,3 +10,7 @@
     background-color: rgba(66, 75, 91, 0.8);
     color: #fff;
 }
+
+.ModalBackground-empty {  
+    left: auto; 
+}

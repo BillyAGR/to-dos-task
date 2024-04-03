@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.css';
 
-function Modal({ children }) {
+function Modal({ children, modalEdit }) {
+ 
     return ReactDOM.createPortal(
-        <div className="ModalBackground">
+        <div className={`ModalBackground ${modalEdit && "ModalBackground-empty" }`}>
             {children}
         </div>,
         document.getElementById('modal')

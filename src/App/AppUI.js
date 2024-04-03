@@ -21,6 +21,10 @@ function AppUI() {
         deleteTodo,
         openModal,
         setOpenModal,
+        modalEdit,
+        setmodalEdit,
+        formData,
+        setFormData,
     } = React.useContext(TodoContext);
 
     return (
@@ -53,17 +57,26 @@ function AppUI() {
                         onComplete={() => completeTodo(todo.text)}
                         onDelete={() => deleteTodo(todo.text)}
                         setOpenModal={setOpenModal}
-
+                        modalEdit={modalEdit}
+                        setmodalEdit={setmodalEdit}
+                        formData={formData}
+                        setFormData={setFormData}
                     />
                 ))
                 }
             </TodoList>
             <CreateTodoButton
                 setOpenModal={setOpenModal}
+                setmodalEdit={setmodalEdit}
             />
             {openModal && (
-                <Modal>
-                    <TodoForm />
+                <Modal
+                    modalEdit={modalEdit}
+                >
+                    <TodoForm
+                        formData={formData}
+                        setFormData={setFormData}
+                    />
                 </Modal>
             )}
         </>
