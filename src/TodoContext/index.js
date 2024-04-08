@@ -22,9 +22,14 @@ function TodoProvider({ children }) {
             const noTildes = (text) => {
                 return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
             };
-            const todoText = noTildes(todo.text.toLowerCase());
-            const searchText = noTildes(searchValue.toLowerCase());
-            return todoText.includes(searchText);
+
+            if (typeof searchValue === 'boolean') {
+                return todo.completed === searchValue;
+            } else {
+                const todoText = noTildes(todo.name.toLowerCase() + todo.text.toLowerCase() + todo.category.toLowerCase());
+                const searchText = noTildes(searchValue.toLowerCase());
+                return todoText.includes(searchText);
+            }
         }
     );
 

@@ -11,10 +11,16 @@
   --highlight-two: #ff0000;
   --white: #FFFFFF;
   --button-cancel: #000000;
-  --font: 'Montserrat', Arial, Helvetica, sans-serif;
+  --title: var(--purple);
+  --home: #00fff7;
+  --work: #8cff00;
+  --personal: #ff00aa;
 
   /*========== Sizer  Font ==========*/
   --md: 24px;
+
+  /* Type font*/
+  --font: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 body {

@@ -1,9 +1,39 @@
-.TodoCounter { 
+.TodoCounter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.TodoCounter-chart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.TodoCounter-chart--item {
   font-size: 24px;
   text-align: center;
   margin: 0;
   padding: 48px;
   font-weight: normal;
+}
+
+.TodoCounter-indicator {
+  margin: 2px 250px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.TodoCounter-indicator--item {
+  margin-right: 10px; 
 }
 
 .TodoCounter span {

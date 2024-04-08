@@ -54,15 +54,15 @@
 }
 
 .TodoItem-border-home {
-  border: 2px solid rgb(0, 255, 247);
+  border: 2px solid var(--home);
 }
 
 .TodoItem-border-work {
-  border: 2px solid rgb(140, 255, 0);
+  border: 2px solid var(--work);
 }
 
 .TodoItem-border-personal {
-  border: 2px solid rgb(255, 0, 170);
+  border: 2px solid var(--personal);
 }
 
 .TodoItem-p--complete {

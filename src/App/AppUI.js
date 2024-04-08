@@ -10,6 +10,7 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoForm } from '../TodoForm';
 import { Modal } from '../Modal';
 import { TodoContext } from '../TodoContext';
+import { TodoHeader } from '../TodoHeader';
 // import './App.css';
 
 function AppUI() {
@@ -29,6 +30,7 @@ function AppUI() {
 
     return (
         <>
+        <TodoHeader />
             <TodoList>
                 <TodoCounter />
                 <TodoSearch />

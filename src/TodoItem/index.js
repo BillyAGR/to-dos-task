@@ -51,7 +51,7 @@ function TodoItem(props) {
                 setmodalEdit={props.setmodalEdit}
                 handleEdit={handleEdit}
             />
-   {/* className={`Icon-container Icon-container-${type}`} */}
+
             <DeleteIcon
                 onDelete={props.onDelete}
             />
