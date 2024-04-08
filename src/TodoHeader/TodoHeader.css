@@ -1,0 +1,14 @@
+.TodoHeader {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 25%;
+    font-size: 30px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--title);
+}
+
+.TodoHeader-color {
+    color: var(--title);
+}

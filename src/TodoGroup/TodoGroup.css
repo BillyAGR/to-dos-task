@@ -1,0 +1,33 @@
+.TodoGroup {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    right: 52%;
+}
+
+.TodoGroup-button {
+    position: relative;
+    left: 20px;
+    width: 100px;
+    right: 24px;
+    border: none;
+    border-radius: 25px;
+    margin: 5px;
+    color: #fafafa;
+    box-shadow: rgb(0, 0, 0) 0px 10px 50px -20px;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.TodoGroup-button--home {
+    background-color: var(--home);
+}
+
+.TodoGroup-button--work {
+    background-color: var(--work);
+}
+
+.TodoGroup-button--personal {
+    background-color: var(--personal);
+}
