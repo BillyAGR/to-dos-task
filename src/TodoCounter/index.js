@@ -16,40 +16,42 @@ function TodoCounter() {
     const todo = totalTodos - completedTodos;
     const completedAllTasks = totalTodos === completedTodos;
     const message = completedAllTasks ?
-        <div className="TodoCounter-chart--item"> <h2><span>¡Felicidades!</span> Has completado todas las tareas</h2> </div> :
-        <section className="TodoCounter">
-            <div className="TodoCounter-chart">
-                <TodoChart />
-                <h2 className='TodoCounter-chart--item'>Has completado <span>{completedTodos}</span> de <span> {totalTodos}</span> tareas.</h2>
-            </div>
-            <div className='TodoCounter-indicator'>
-                <span
-                    className='TodoCounter-indicator--item'
-                    onClick={
-                        () => {
-                            setSearchValue('');
-                        }
+        <h2 className="TodoCounter-chart--item"><span>Congratulations!</span> You have completed all the task.</h2> :
+        <h2 className='TodoCounter-chart--item'>You have completed <span>{completedTodos}</span> of <span> {totalTodos}</span> task.</h2>;
+
+    return (<section className="TodoCounter">
+        <div className="TodoCounter-chart">
+            <TodoChart />
+            {message}
+        </div>
+        <div className='TodoCounter-indicator'>
+            <span
+                className='TodoCounter-indicator--item'
+                onClick={
+                    () => {
+                        setSearchValue('');
                     }
-                > <FaListCheck /> Total: {totalTodos}</span>
-                <span
-                    className='TodoCounter-indicator--item'
-                    onClick={
-                        () => {
-                            setSearchValue(false);
-                        }
+                }
+            > <FaListCheck /> Total: {totalTodos}</span>
+            <span
+                className='TodoCounter-indicator--item'
+                onClick={
+                    () => {
+                        setSearchValue(false);
                     }
-                > <FaRegCircleCheck /> To Do's: {todo}</span>
-                <span
-                    className='TodoCounter-indicator--item'
-                    onClick={
-                        () => {
-                            setSearchValue(true);
-                        }
+                }
+            > <FaRegCircleCheck /> To Do's: {todo}</span>
+            <span
+                className='TodoCounter-indicator--item'
+                onClick={
+                    () => {
+                        setSearchValue(true);
                     }
-                ><FaCircleCheck />  completed: {completedTodos}</span>
-            </div>
-        </section>
-    return message;
+                }
+            ><FaCircleCheck />  completed: {completedTodos}</span>
+        </div>
+    </section>);
+
 }
 
 export { TodoCounter };

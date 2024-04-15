@@ -1,12 +1,14 @@
 .TodoList {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0 0 56px 0;
+  max-height: 600px;
+  overflow-y: auto;
   list-style: none;
   border-radius: 26px;
   background-color: var(--gold);
-  box-shadow: #000000 0px 10px 50px -20px;
-  max-height: 600px;
-  overflow-y: auto;
+  box-shadow: 0px 10px 50px -20px #000000;
 }
 
 .Todo-list-hundred--percent {
@@ -32,4 +34,34 @@
   background-color: var(--gold);
   border-radius: 24px;
   margin: 18px 0px 18px 50px;
+}
+
+@media (max-width: 1400px) {
+  .Todo-list-hundred--percent {
+    width: calc(60% - 40px);
+  }
+}
+
+@media (max-width: 1350px) {
+  .Todo-list-hundred--percent {
+    width: calc(70% - 50px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .Todo-list-hundred--percent {
+    width: calc(80% - 60px);
+  }
+}
+
+@media (max-width: 900px) {
+  .Todo-list-hundred--percent {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 500px) {
+  .Todo-list-hundred--percent {
+    width: 100%;
+  }
 }

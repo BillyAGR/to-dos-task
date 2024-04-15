@@ -9,35 +9,24 @@ function TodoSearch() {
         setSearchValue,
     } = React.useContext(TodoContext);
 
-    const getSearchValue = () => {
+    const [isFocused, setIsFocused] = React.useState(false);
 
-        if (typeof searchValue === 'boolean') {
-            return '';
-        }
+    const handleFocus = () => {
+        setIsFocused(true);
+    };
 
-        if (searchValue === 'home') {
-            return '';
-        }
-
-        if (searchValue === 'work') {
-            return '';
-        }
-
-        if (searchValue === 'personal') {
-            return '';
-        }
-
-        return searchValue;
-
-    }
+    const handleBlur = () => {
+        setIsFocused(false);
+    }; 
 
     return (
         <span className='TodoSearchBox'>
             <input
-                placeholder="Buscar tareas"
+                placeholder="Find task"
                 className="TodoSearch"
-                // value={typeof searchValue !== 'boolean' ? searchValue : ''}
-                value={typeof searchValue !== 'boolean' && !['home', 'work', 'personal'].includes(searchValue) ? searchValue : ''}
+                value={isFocused === true && typeof searchValue !== 'boolean' ? searchValue : ''}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
                 onChange={(event) => {
                     setSearchValue(event.target.value);
                 }}

@@ -1,0 +1,44 @@
+.TodoUser {
+    position: relative;
+    left: 120%;
+}
+
+.TodoUser-button {
+    right: 24px;
+    height: 64px;
+    width: 64px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    color: #fafafa;
+    cursor: pointer;
+    background-color: var(--gray-transparent);
+    color: var(--dark);
+    font-size: var(--md);
+    font-weight: 700;
+}
+
+.TodoUser-botton-sun {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+@media (max-width: 1670px) {
+    .TodoUser {
+        left: 80%;
+    }
+}
+
+@media (max-width: 1158px) {
+    .TodoUser {
+        left: 50%;
+    }
+}
+
+@media (max-width: 715px) {
+    .TodoUser {
+        left: initial;
+    }
+}

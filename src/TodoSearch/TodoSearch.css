@@ -17,9 +17,9 @@
 }
 
 .TodoSearch::placeholder {
+  color: #A5A5A5;
   font-family: var(--font);
   font-weight: 400;
-  color: #A5A5A5;
 }
 
 .TodoSearch:focus {
@@ -29,7 +29,7 @@
 .TodoSearch-icon {
   position: absolute;
   right: 2.5rem;
-  top: -0.4rem;
+  top: 1.5rem;
   color: var(--purple);
   width: var(--md);
   height: var(--md);

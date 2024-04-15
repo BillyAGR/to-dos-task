@@ -9,23 +9,26 @@
     cursor: pointer;
 }
 
-.Icon-container-check {
+.Icon-container-check,
+.Icon-container-edit,
+.Icon-container-delete {
     position: absolute;
+}
+
+.Icon-container-check {
     right: 65px;
 }
 
-.Icon-container-check--active {
-    color: var(--highlight);
-}
-
 .Icon-container-edit {
-    position: absolute;
     right: 35px;
 }
 
 .Icon-container-delete {
-    position: absolute;
-    right: 0
+    right: 0;
+}
+
+.Icon-container-check--active {
+    color: var(--highlight);
 }
 
 .Icon-container-delete:hover {
@@ -54,6 +57,5 @@
 }
 
 .Icon-container-delete:hover .Icon-svg {
-    fill:var(--highlight-two);
+    fill: var(--highlight-two);
 }
-

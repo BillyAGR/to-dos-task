@@ -10,7 +10,9 @@
   --highlight: #ffff00;
   --highlight-two: #ff0000;
   --white: #FFFFFF;
-  --button-cancel: #000000;
+  --dark: #000000;
+  --gray-transparent: #b4b4b49e;
+  --button-cancel: var(--dark);
   --title: var(--purple);
   --home: #00fff7;
   --work: #8cff00;

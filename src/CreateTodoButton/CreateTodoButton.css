@@ -1,25 +1,60 @@
 .CreateTodoButton {
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 64px;
+  left: 35%;
+  border-radius: 23px;
+}
+
+.CreateTodoButton-button {
   height: 64px;
   width: 64px;
-  bottom: 24px;
-  right: 24px;
-  /* z-index: 1; */
   border: none;
   border-radius: 50%;
   cursor: pointer;
   color: #fafafa;
   background-color: var(--purple);
-  box-shadow: 0 5px 25px rgba(97, 218, 250, .5);
+  box-shadow: 0 5px 25px var(--purple);
   font-size: 50px;
   font-weight: 700;
   transform: rotate(0);
   transition: all 0.3s ease 0s;
 }
 
-.CreateTodoButton:hover {
+.CreateTodoButton-button:hover {
   transform: rotate(224deg);
+}
+
+@media (max-width: 1400px) {
+  .CreateTodoButton {
+    width: calc(60% - 40px);
+  }
+}
+
+@media (max-width: 1350px) {
+  .CreateTodoButton {
+    width: calc(70% - 50px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .CreateTodoButton {
+    left: 0;
+    width: calc(80% - 60px);
+    background-color: var(--gray-transparent);
+  }
+}
+
+@media (max-width: 900px) {
+  .CreateTodoButton {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 500px) {
+  .CreateTodoButton {
+    width: 100%;
+  }
 }
