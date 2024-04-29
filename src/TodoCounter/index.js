@@ -14,7 +14,7 @@ function TodoCounter() {
     const todo = totalTodos - completedTodos;
     const completedAllTasks = totalTodos === completedTodos;
     const message = completedAllTasks ?
-        <h2 className="TodoCounter-chart--item"><span>Congratulations!</span> You have completed all the task.</h2> :
+        <h2 className="TodoCounter-chart--item"><span>Welcome!</span> It's time to do a task.</h2> :
         <h2 className='TodoCounter-chart--item'>You have completed <span>{completedTodos}</span> of <span> {totalTodos}</span> task.</h2>;
 
     return (<section className="TodoCounter">
