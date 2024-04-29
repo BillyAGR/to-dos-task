@@ -3,12 +3,12 @@
   flex-direction: column;
   margin: 0;
   padding: 0 0 56px 0;
-  max-height: 600px;
+  max-height: 660px;
   overflow-y: auto;
   list-style: none;
   border-radius: 26px;
-  background-color: var(--gold);
-  box-shadow: 0px 10px 50px -20px #000000;
+  background-color: var(--list);
+  box-shadow: 1px 11px 50px -17px var(--dark);
 }
 
 .Todo-list-hundred--percent {
@@ -31,7 +31,7 @@
 }
 
 .TodoList::-webkit-scrollbar-track {
-  background-color: var(--gold);
+  background-color: var(--list);
   border-radius: 24px;
   margin: 18px 0px 18px 50px;
 }

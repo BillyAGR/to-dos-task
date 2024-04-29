@@ -2,11 +2,12 @@
   /*========== Colors ==========*/
 
   --hue-color: 271;
-  --gold: #FDB927;
+  --gold: #fdb927;
   --purple: hsl(var(--hue-color), 56%, 33%);
   --purple-bright: hsl(var(--hue-color), 87%, 55%);
-  --purple-item: hsl(var(--hue-color), 100%, 25%);
-  --box-shadow: var(--purple-bright) 0px 10px 50px -20px;
+  --item: hsl(var(--hue-color), 100%, 25%);
+  --list: var(--gold);
+  --box-shadow-purple: 1px 11px 50px -17px var(--purple-bright);
   --highlight: #ffff00;
   --highlight-two: #ff0000;
   --white: #FFFFFF;
@@ -17,9 +18,12 @@
   --home: #00fff7;
   --work: #8cff00;
   --personal: #ff00aa;
+  --complete: var(--white);
+  --box-shadow: 0 5px 16px var(--dark);
 
   /*========== Sizer  Font ==========*/
   --md: 24px;
+  --lg: 64px;
 
   /* Type font*/
   --font: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -30,14 +34,25 @@ body {
   padding: 0;
   color: var(--white);
   font-family: var(--font);
+  background-color: var(--white);
 }
+
+body.dark-theme {
+  --item: initial;
+  --list: var(--purple);
+  background-color: var(--purple);
+  --title: var(--gold);
+  --complete: var(--gold);
+}
+
 
 #root {
   position: relative;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 0 24px;
-  min-height: 100vh;
+  margin: 0 20px;
+  min-height: 75vh;
 }

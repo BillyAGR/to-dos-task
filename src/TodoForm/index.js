@@ -1,11 +1,13 @@
 import React from 'react';
 import './TodoForm.css';
 import { TodoContext } from '../TodoContext';
+import { FaCirclePlus, FaPen } from "react-icons/fa6";
 
 function TodoForm() {
     const {
         addTodo,
         setOpenModal,
+        modalEdit,
         setmodalEdit,
         formData,
         setFormData,
@@ -15,6 +17,15 @@ function TodoForm() {
     const [newDescription, setnewDescription] = React.useState('');
     const [newDealine, setnewDealine] = React.useState('');
     const [newCategory, setnewCategory] = React.useState('');
+    const [expanded, setExpanded] = React.useState(false);
+
+    React.useEffect(() => {
+        const timer = setTimeout(() => {
+            setExpanded(true);
+        }, 0.4);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     React.useEffect(() => {
         if (formData) {
@@ -46,37 +57,52 @@ function TodoForm() {
     }
 
     return (
-        <form className='TodoForm' onSubmit={onSubmit}>
-            <label className='TodoForm-label'> Escribe tu nuevo Task</label>
-            <input className='TodoForm-input' placeholder='Nombre de la tarea'
+        <form className={`TodoForm ${expanded ? 'TodoForm-expand' : ''}`} onSubmit={onSubmit}>
+            <div className='TodoForm-icon'>
+                {modalEdit ? <FaPen /> : <FaCirclePlus />}
+            </div>
+            <label
+                className='TodoForm-label'
+                id='FormTitle'> Write a new or modified task.
+            </label>
+            <input
+                className='TodoForm-input'
+                placeholder='Name of the taks'
                 value={newName}
                 onChange={(event) => handleInputChange(event, setnewName)}
                 required
                 disabled={formData ? true : false}
+                id='FormName'
             />
-
-            <textarea className='TodoForm-textArea' placeholder='Describa aquí tu nueva tarea'
+            <textarea
+                className='TodoForm-textArea'
+                placeholder='Describe the new taks here.'
                 value={newDescription}
                 onChange={(event) => handleInputChange(event, setnewDescription)}
                 required
+                id='FormDescription'
             />
-            <input className='TodoForm-input'
+            <input
+                className='TodoForm-input'
                 type="date"
                 value={newDealine}
                 onChange={(event) => handleInputChange(event, setnewDealine)}
                 required
+                id='FormDate'
             />
-            <select className='TodoForm-select'
+            <select
+                className='TodoForm-select'
                 value={newCategory}
                 onChange={(event) => handleInputChange(event, setnewCategory)}
                 required
+                id='FormCategories'
             >
                 <option value="">Select categories</option>
                 <option value="home">Home</option>
                 <option value="work">Work</option>
                 <option value="personal">Personal</option>
             </select>
-            <div className='TodoForm-buttonContainer'>
+            <div className='TodoForm-buttonContainer' id='FormButtons'>
                 <button
                     className='TodoForm-button TodoForm-button--cancel'
                     onClick={onCancel}>

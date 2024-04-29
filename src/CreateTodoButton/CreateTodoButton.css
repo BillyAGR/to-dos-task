@@ -3,20 +3,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 64px;
+  bottom: var(--lg);
   left: 35%;
   border-radius: 23px;
 }
 
 .CreateTodoButton-button {
-  height: 64px;
-  width: 64px;
+  height: var(--lg);
+  width: var(--lg);
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  color: #fafafa;
-  background-color: var(--purple);
-  box-shadow: 0 5px 25px var(--purple);
+  color: var(--white);
+  background-color: var(--list);
+  box-shadow: 0 5px 16px var(--dark);
   font-size: 50px;
   font-weight: 700;
   transform: rotate(0);

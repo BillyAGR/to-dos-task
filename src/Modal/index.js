@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './Modal.css';
 
 function Modal({ children, modalEdit }) {
- 
+
+
     return ReactDOM.createPortal(
-        <div className={`ModalBackground ${modalEdit && "ModalBackground-empty" }`}>
+        <div
+            className={`ModalBackground ${modalEdit && "ModalBackground-empty"}`}
+        >
             {children}
         </div>,
         document.getElementById('modal')

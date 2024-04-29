@@ -8,14 +8,14 @@
   margin: 12px 29px;
   padding: 3px;
   border-radius: 25px;
-  background-color: var(--purple-item);
+  background-color: var(--item);
   color: var(--white);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-purple);
 }
 
 .TodoItem--complete {
-  border-left: 4px solid var(--white);
-  border-right: 4px solid var(--white);
+  border-left: 4px solid var(--complete);
+  border-right: 4px solid var(--complete);
 }
 
 .TodoItem--edit:hover {

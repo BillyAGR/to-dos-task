@@ -1,9 +1,7 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
 import { TodoChart } from '../TodoChart';
-import { FaListCheck } from "react-icons/fa6";
-import { FaCircleCheck } from "react-icons/fa6";
-import { FaRegCircleCheck } from "react-icons/fa6";
+import { FaListCheck, FaCircleCheck, FaRegCircleCheck } from "react-icons/fa6";
 import './TodoCounter.css';
 
 function TodoCounter() {

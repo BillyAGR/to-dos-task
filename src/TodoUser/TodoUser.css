@@ -1,12 +1,12 @@
 .TodoUser {
     position: relative;
-    left: 120%;
+    left: 110%;
 }
 
 .TodoUser-button {
     right: 24px;
-    height: 64px;
-    width: 64px;
+    height:var(--lg);
+    width: var(--lg);
     justify-content: center;
     align-items: center;
     border: none;
@@ -21,8 +21,8 @@
 }
 
 .TodoUser-botton-sun {
-    background-color: var(--white);
-    color: var(--dark);
+    background-color: initial;
+    color: var(--gold);
 }
 
 @media (max-width: 1670px) {

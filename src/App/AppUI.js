@@ -11,7 +11,7 @@ import { TodoForm } from '../TodoForm';
 import { Modal } from '../Modal';
 import { TodoContext } from '../TodoContext';
 import { TodoHeader } from '../TodoHeader';
-// import './App.css';
+import { AboutOf } from '../AboutOf';
 
 function AppUI() {
     const {
@@ -26,11 +26,12 @@ function AppUI() {
         setmodalEdit,
         formData,
         setFormData,
+        aboutOf,
     } = React.useContext(TodoContext);
 
     return (
         <>
-        <TodoHeader />
+            <TodoHeader />
             <TodoList>
                 <TodoCounter />
                 <TodoSearch />
@@ -75,10 +76,11 @@ function AppUI() {
                 <Modal
                     modalEdit={modalEdit}
                 >
-                    <TodoForm
-                        formData={formData}
-                        setFormData={setFormData}
-                    />
+                    {aboutOf ? <AboutOf /> :
+                        <TodoForm
+                            formData={formData}
+                            setFormData={setFormData}
+                        />}
                 </Modal>
             )}
         </>

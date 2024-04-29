@@ -3,7 +3,8 @@ import './EmptyTodos.css';
 
 function EmptyTodos() {
     return (
-        <p className='EmptyTodos'>¡Crea tu primera tarea!</p>
+        <p className='EmptyTodos'>You don't have any tasks yet
+        Click on the + button to add one</p>
     );
 }
 

@@ -6,11 +6,14 @@ import './TodoHeader.css';
 function TodoHeader() {
     return (
         <header className='TodoHeader'>
-            <h1 className='TodoHeader-tile'>
-                To Do's <span className='TodoHeader-color'>Task</span>
+            <div className='TodoHeader-title'>
+                <h1 className='TodoHeader-title--text'>
+                    To Do's <span className='TodoHeader-title--color'>Task</span>
+                </h1>
                 <TodoUser />
-            </h1> 
+            </div>
             <TodoGroup />
+
         </header>
     );
 }

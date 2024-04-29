@@ -9,15 +9,19 @@
     -webkit-text-stroke: 1px var(--title);
 }
 
-.TodoHeader-tile {
+.TodoHeader-title {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
-    margin: 10px;
 }
 
-.TodoHeader-color {
+.TodoHeader-title--text {
+    position: relative;
+    left: 90px;
+}
+
+.TodoHeader-title--color {
     color: var(--title);
 }
 
@@ -33,8 +37,14 @@
         font-size: 80%;
     }
 
-    .TodoHeader-tile {
+    .TodoHeader-title {
         width: initial;
         margin: 10px;
+        
+    }
+
+    .TodoHeader-title--text {
+        position: relative;
+        left: initial;
     }
 }

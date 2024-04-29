@@ -14,21 +14,25 @@ function TodoProvider({ children }) {
     const [openModal, setOpenModal] = React.useState(false);
     const [modalEdit, setmodalEdit] = React.useState(false);
     const [formData, setFormData] = React.useState(null);
+    const [aboutOf, setAboutOf] = React.useState(false);
     const totalTodos = todos.length;
     const completedTodos = todos.filter(todo => !!todo.completed).length;
 
+
+
+    const normalizeText = (text) => {
+        return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    };
+
     const searchedTodos = todos.filter(
         (todo) => {
-            const noTildes = (text) => {
-                return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-            };
-
             if (typeof searchValue === 'boolean') {
                 return todo.completed === searchValue;
             } else {
-                const todoText = noTildes(todo.name.toLowerCase() + todo.text.toLowerCase() + todo.category.toLowerCase());
-                const searchText = noTildes(searchValue.toLowerCase());
-                return todoText.includes(searchText);
+                const searchText = normalizeText(searchValue);
+                const { name, text, category } = todo;
+                const normalizedTodoText = normalizeText(name + text + category);
+                return normalizedTodoText.includes(searchText);
             }
         }
     );
@@ -85,6 +89,8 @@ function TodoProvider({ children }) {
             setmodalEdit,
             formData,
             setFormData,
+            aboutOf, 
+            setAboutOf,
         }}>
             {children}
         </TodoContext.Provider>
