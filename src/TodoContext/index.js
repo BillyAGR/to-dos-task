@@ -18,8 +18,6 @@ function TodoProvider({ children }) {
     const totalTodos = todos.length;
     const completedTodos = todos.filter(todo => !!todo.completed).length;
 
-
-
     const normalizeText = (text) => {
         return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     };
