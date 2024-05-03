@@ -1,6 +1,6 @@
 import './CreateTodoButton.css';
 
-function CreateTodoButton({ setOpenModal }) {
+function CreateTodoButton({ setOpenModal, setFormData }) {
     return (
         <div className='CreateTodoButton'>
             <button
@@ -8,6 +8,7 @@ function CreateTodoButton({ setOpenModal }) {
                 onClick={
                     () => {
                         setOpenModal(state => !state);
+                        setFormData(null);
                     }
                 }
             >+</button>
