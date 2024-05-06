@@ -67,3 +67,16 @@
 .TodoItem-p--complete {
   text-decoration: 2px solid var(--highlight) line-through;
 }
+
+@media (max-width: 500px) {
+  .TodoItem-p {
+    margin: 12px 0 1px 24px;
+    width: calc(100% - 120px);
+  }
+
+  .TodoItem {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 50px);
+  }
+}
