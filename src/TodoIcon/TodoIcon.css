@@ -60,7 +60,7 @@
     fill: var(--highlight-two);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .Icon-container-check:hover .Icon-svg {
         fill: var(--white);
     }
