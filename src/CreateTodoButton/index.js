@@ -7,8 +7,9 @@ function CreateTodoButton({ setOpenModal, setFormData }) {
                 className="CreateTodoButton-button"
                 onClick={
                     () => {
+                        console.log('setFormData', setFormData);
                         setOpenModal(state => !state);
-                        setFormData(null);
+                        setFormData({});
                     }
                 }
             >+</button>

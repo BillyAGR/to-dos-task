@@ -70,7 +70,7 @@ function AppUI() {
             </TodoList>
             <CreateTodoButton
                 setOpenModal={setOpenModal}
-                setmodalEdit={setmodalEdit}
+                setFormData={setFormData}
             />
             {openModal && (
                 <Modal
