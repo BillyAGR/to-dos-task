@@ -49,7 +49,7 @@ function TodoForm() {
     const reset = () => {
         setmodalEdit(false);
         setOpenModal(false);
-        setFormData({});
+        setFormData(null);
     }
 
     const handleInputChange = (event, setState) => {

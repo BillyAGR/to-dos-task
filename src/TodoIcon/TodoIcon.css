@@ -59,9 +59,3 @@
 .Icon-container-delete:hover .Icon-svg {
     fill: var(--highlight-two);
 }
-
-@media (max-width: 550px) {
-    .Icon-container-check:hover .Icon-svg {
-        fill: var(--white);
-    }
-}

@@ -69,14 +69,14 @@
 }
 
 @media (max-width: 500px) {
-  .TodoItem-p {
-    margin: 12px 0 1px 24px;
-    width: calc(100% - 120px);
-  }
-
   .TodoItem {
     justify-content: initial;
     align-items: flex-start;
-    width: calc(100% - 50px);
+    width: calc(100% - 70px);
+  }
+
+  .TodoItem-p {
+    margin: 12px 0 1px 24px;
+    width: calc(100% - 120px);
   }
 }

@@ -13,7 +13,7 @@ function TodoProvider({ children }) {
     const [searchValue, setSearchValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
     const [modalEdit, setmodalEdit] = React.useState(false);
-    const [formData, setFormData] = React.useState({});
+    const [formData, setFormData] = React.useState(null);
     const [aboutOf, setAboutOf] = React.useState(false);
     const totalTodos = todos.length;
     const completedTodos = todos.filter(todo => !!todo.completed).length;

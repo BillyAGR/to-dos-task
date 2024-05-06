@@ -9,7 +9,7 @@ function CreateTodoButton({ setOpenModal, setFormData }) {
                     () => {
                         console.log('setFormData', setFormData);
                         setOpenModal(state => !state);
-                        setFormData({});
+                        setFormData(null);
                     }
                 }
             >+</button>
