@@ -72,7 +72,6 @@
   .TodoItem {
     justify-content: initial;
     align-items: flex-start;
-    width: calc(100% - 70px);
   }
 
   .TodoItem-p {
