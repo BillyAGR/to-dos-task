@@ -34,7 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "/home/sao/projectsPlatzi/develop/npm/curso-react-intro/build/index.html",
+  "homepage": "https://BillyAGR.github.io/to-dos-task",
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
