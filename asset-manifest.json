@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BillyAGR/to-dos-task/static/css/main.5b1f7a72.css",
+    "main.js": "/BillyAGR/to-dos-task/static/js/main.4873cb74.js",
+    "index.html": "/BillyAGR/to-dos-task/index.html",
+    "main.5b1f7a72.css.map": "/BillyAGR/to-dos-task/static/css/main.5b1f7a72.css.map",
+    "main.4873cb74.js.map": "/BillyAGR/to-dos-task/static/js/main.4873cb74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b1f7a72.css",
+    "static/js/main.4873cb74.js"
+  ]
+}
