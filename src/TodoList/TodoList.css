@@ -61,6 +61,10 @@
 }
 
 @media (max-width: 500px) {
+  .TodoList {
+    max-height: 600px;
+  }
+
   .Todo-list-hundred--percent {
     width: 100%;
   }
